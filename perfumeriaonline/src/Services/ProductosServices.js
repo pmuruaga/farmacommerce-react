@@ -1,13 +1,10 @@
-import instace from "../Config/axios";
+import instance from "../Config/axios";
 
-export function getAll(query=""){
-    return instance.get(""+query);
+//MLA1271: Categoria de Perfumes en ML.
+export async function getAllPerfumes(){
+    return instance.get("/sites/MLA/search?category=MLA1271");
 }
 
-export function getAllPerfumes(){
-    return instance.get("sites/MLA/search?category=MLA1271");
-}
-
-export function getById(id){
-    return instance.get("items/"+id);
+export async function getProductoById(id){
+    return instance.get("/items/"+id);
 }
