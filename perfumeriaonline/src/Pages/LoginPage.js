@@ -9,9 +9,9 @@ function LoginPage(){
 
     return(
         <>
-            <div className="main-container">                
-                Estoy en el Login
-                <form onSubmit={handleSubmit(onSubmit)}>
+            <div className="main-container-full">                
+                <h1 className="subheader">Login</h1>
+                <form onSubmit={handleSubmit(onSubmit)} className="mid-form">
                     <div>
                         <label>Email</label>
                         <input type="email" {...register("email", { required: true })} />
@@ -22,7 +22,7 @@ function LoginPage(){
                         <input type="password" {...register("password", { required: true })} />
                         {errors.password && <span>* El campo password es obligatorio</span>}
                     </div>
-                    <button type="submit">Ingresar</button>
+                    <button type="submit" className="btn btn-success">Ingresar</button>
                 </form>
             </div>
         </>

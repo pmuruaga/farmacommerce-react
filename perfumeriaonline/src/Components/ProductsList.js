@@ -1,6 +1,7 @@
 import React,{useState,useEffect} from "react";
 import ProductItem from './ProductItem';
 import {getAllPerfumes} from "../Services/ProductosServices";
+import spinner from "../assets/images/spinner.gif";
 
 function ProductsList(){
     const [listadoProductos,setListadoProductos]=useState([])
@@ -42,6 +43,7 @@ function ProductsList(){
         return(
             <div>
                 Cargando ...
+                <img src={spinner}></img>
             </div>
         )
         

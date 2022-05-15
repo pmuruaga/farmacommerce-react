@@ -3,8 +3,10 @@ import React from "react";
 function NotFoundPage(){    
     return(
         <>
-            <div className="main-container">                
-                404 La Pagina que Busca no Existe.
+            <div className="main-container-full">                
+                <div className="error-page">
+                    404 - La Pagina Que Busca No Existe.
+                </div>
             </div>
         </>
     );

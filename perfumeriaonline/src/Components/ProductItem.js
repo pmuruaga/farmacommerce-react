@@ -10,18 +10,24 @@ const styles = {
 function ProductItem(props){
     console.log("Props",props);
     const {nombre,precio,descripcion,children,id,thumbnail} = props;
-
+    
     return(
-        <>
-            <div className='item-detalle-container'>
-                <img src={thumbnail} style={styles.img}></img>
-                <p>{nombre}</p>
-                <p>{precio}</p>
-                <p>{descripcion || ''}</p>               
-                    {children}
-                <button>Comprar</button>
-                <Link to={'/detalle/'+id}>Ver Detalle</Link>
-
+        <>        
+            <div id="item-detalle-container">
+                <div className="producto-item">
+                    <div className="image-wrap">
+                        <img src={thumbnail} style={styles.img}></img>                        
+                    </div>
+                    <div className="detalle-item">
+                        <h2>{nombre}</h2>
+                        <p>$ {precio}</p>                    
+                        <p>{descripcion || ''}</p>               
+                        {children}
+                        <Link to={'/detalle/'+id}>Ver Detalle</Link>                                        
+                        <div className="clearfix"></div>
+                        <button className="btn btn-success">Comprar</button>
+                    </div>                    
+                </div>
             </div>
         </>
     );
